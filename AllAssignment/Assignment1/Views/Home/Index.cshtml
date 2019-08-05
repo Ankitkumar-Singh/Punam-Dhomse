@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container mt-5">
+    <div class="card-body mt-5 text-center">
+        <strong>@ViewBag.Greeting</strong>
+        <h2><b>We are going to have an exicting party.</b>
+            <img src="~/Content/Images/img1.png" /></h2>
+        <p>(You are always welcome.)</p>
+        <div class="btn btnRspv">
+        <p>@Html.ActionLink("RSPV Now", "RspvForm")</p>
+        </div>
+    </div>
+</div>

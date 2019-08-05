@@ -1,0 +1,6 @@
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache

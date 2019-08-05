@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Assignment2.Models.Guest>
+@using Assignment2.Models
+@{
+    ViewBag.Title = "List of guest";
+}
+<div class="container m-auto">
+    <h2>List of guest</h2>
+    <ul>
+        @foreach (Guest guest in @Model)
+        {
+            <li> @Html.ActionLink(guest.Name, "Details", new { id = guest.Id })</li>
+        }
+    </ul>
+    @Html.ActionLink("Back to list","Index","Invited")
+</div>

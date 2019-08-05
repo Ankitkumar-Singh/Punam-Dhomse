@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BusinessLayer.Guest>
+
+@{
+    ViewBag.Title = "Guest List";
+}
+<div class="container">
+    <h2 class="text-center">List of Guests</h2>
+</div>
+<div class="container m-auto ">
+    <div class="row">
+        <div class="col-md-3 ">
+            <b>@Html.DisplayNameFor(model => model.Name)</b>
+        </div>
+        <div class="col-md-3">
+            <b>@Html.DisplayNameFor(model => model.Address)</b>
+        </div>
+        <div class="col-md-3">
+            <b> @Html.DisplayNameFor(model => model.Email)</b>
+        </div>
+        <div class="col-md-3">
+            <b> @Html.DisplayNameFor(model => model.Age)</b>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                @Html.DisplayFor(modelItem => item.Name)
+            </div>
+            <div class="col-md-3">
+                @Html.DisplayFor(modelItem => item.Address)
+            </div>
+            <div class="col-md-3">
+                @Html.DisplayFor(modelItem => item.Email)
+            </div>
+            <div class="col-md-3">
+                @Html.DisplayFor(modelItem => item.Age)
+            </div>
+            <hr />
+        }
+    </div>
+</div>

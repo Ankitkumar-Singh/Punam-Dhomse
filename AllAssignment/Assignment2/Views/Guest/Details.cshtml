@@ -1,0 +1,31 @@
+﻿@model  Assignment2.Models.Guest
+
+@using Assignment2.Models;
+@{
+    ViewBag.Title = "Guest Details";
+}
+
+<div class="container">
+    <h2 class="text-center">Guest Details</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Address</td>
+            <td>@Model.Email</td>
+            <td>@Model.Age</td>
+        </tr>
+    </tbody>
+</table>
+@Html.ActionLink("Back to List", "Index", new { InvitationId = @Model.InvitationId })
+</div>

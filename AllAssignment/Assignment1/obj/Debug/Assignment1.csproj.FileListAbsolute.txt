@@ -32,3 +32,7 @@ D:\asp.net\AllAssignment\Assignment1\bin\System.Web.Helpers.xml
 D:\asp.net\AllAssignment\Assignment1\bin\System.Web.Mvc.xml
 D:\asp.net\AllAssignment\Assignment1\obj\Debug\AllAssignment.dll
 D:\asp.net\AllAssignment\Assignment1\obj\Debug\AllAssignment.pdb
+D:\asp.net\AllAssignment\Assignment1\bin\Microsoft.Web.Infrastructure.dll
+D:\asp.net\AllAssignment\Assignment1\obj\Debug\Assignment1.csprojAssemblyReference.cache
+D:\asp.net\AllAssignment\Assignment1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache
+D:\asp.net\AllAssignment\Assignment1\obj\Debug\Assignment1.csproj.CopyComplete

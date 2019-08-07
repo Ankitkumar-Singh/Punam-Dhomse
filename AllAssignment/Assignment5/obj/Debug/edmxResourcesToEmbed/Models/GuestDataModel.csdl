@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Guest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="InvitationId" Type="Int32" />
+    <Property Name="DateOFBirth" Type="DateTime" Precision="0" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Invitation" Relationship="Self.FK__GuestDeta__Invit__3E52440B" FromRole="GuestDetails" ToRole="Invitation" />
+  </EntityType>
+  <EntityType Name="Invitation">
+    <Key>
+      <PropertyRef Name="InvitationId" />
+    </Key>
+    <Property Name="InvitationId" Type="Int32" Nullable="false" />
+    <Property Name="Invited" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Guests" Relationship="Self.FK__GuestDeta__Invit__3E52440B" FromRole="Invitation" ToRole="GuestDetails" />
+  </EntityType>
+  <Association Name="FK__GuestDeta__Invit__3E52440B">
+    <End Role="Invitation" Type="Self.Invitation" Multiplicity="0..1" />
+    <End Role="GuestDetails" Type="Models.Guest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invitation">
+        <PropertyRef Name="InvitationId" />
+      </Principal>
+      <Dependent Role="GuestDetails">
+        <PropertyRef Name="InvitationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GuestContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Guests" EntityType="Models.Guest" />
+    <EntitySet Name="Invitations" EntityType="Self.Invitation" />
+    <AssociationSet Name="FK__GuestDeta__Invit__3E52440B" Association="Self.FK__GuestDeta__Invit__3E52440B">
+      <End Role="Invitation" EntitySet="Invitations" />
+      <End Role="GuestDetails" EntitySet="Guests" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -21,5 +21,8 @@ D:\asp.net\AllAssignment\Assignment3\bin\EntityFramework.SqlServer.dll
 D:\asp.net\AllAssignment\Assignment3\bin\BusinessLayer.pdb
 D:\asp.net\AllAssignment\Assignment3\bin\EntityFramework.xml
 D:\asp.net\AllAssignment\Assignment3\bin\EntityFramework.SqlServer.xml
-D:\asp.net\AllAssignment\Assignment3\obj\Debug\Assignment3.csprojResolveAssemblyReference.cache
 D:\asp.net\AllAssignment\Assignment3\bin\Microsoft.Web.Infrastructure.dll
+D:\asp.net\AllAssignment\Assignment3\bin\BusinessLayer.dll.config
+D:\asp.net\AllAssignment\Assignment3\obj\Debug\Assignment3.csprojAssemblyReference.cache
+D:\asp.net\AllAssignment\Assignment3\obj\Debug\Assignment3.csproj.CoreCompileInputs.cache
+D:\asp.net\AllAssignment\Assignment3\obj\Debug\Assignment3.csproj.CopyComplete

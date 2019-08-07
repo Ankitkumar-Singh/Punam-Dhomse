@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BusinessLayer.Guest>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 >List of Guests</h2>
+            <hr />
+        </div>
+        <div class="col-md-6 ">
+            @Html.ActionLink("Create New", "Create", "Home", new { @class = "btn btn-success float-right mt-5" })
+        </div>
+    </div>
+</div>
+
+<div class="container  m-auto ">
+    <div class="row">
+        <div class="col-md-2 ">
+            <b>@Html.DisplayNameFor(model => model.Name)</b>
+        </div>
+        <div class="col-md-2">
+            <b>@Html.DisplayNameFor(model => model.Address)</b>
+        </div>
+        <div class="col-md-2">
+            <b> @Html.DisplayNameFor(model => model.Email)</b>
+        </div>
+        <div class="col-md-2">
+            <b> @Html.DisplayNameFor(model => model.DateOfBirth)</b>
+        </div>
+        <div class="col-md-2">
+            <b> @Html.DisplayNameFor(model => model.Gender)</b>
+        </div>
+        <div class="col-md-2">
+            <b>Action</b>
+        </div>
+    </div>
+    <hr />
+    @foreach (var item in Model)
+    {
+        using (Html.BeginForm("Delete", "Home", new { id = item.Id }))
+        {
+            <div class="row">
+                <div class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.Address)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.Email)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </div>
+                <div class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </div>
+                <div class="col-md-2">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-outline-info m-1" })
+                    <input type="submit" value="Delete" class="btn btn-outline-danger" onclick="return confirm('Are you sure?');" />
+                </div>
+            </div>
+            <hr />
+        }
+    }
+</div>
+

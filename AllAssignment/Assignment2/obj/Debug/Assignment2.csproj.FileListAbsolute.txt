@@ -19,3 +19,7 @@ D:\asp.net\AllAssignment\Assignment2\bin\EntityFramework.dll
 D:\asp.net\AllAssignment\Assignment2\bin\EntityFramework.SqlServer.dll
 D:\asp.net\AllAssignment\Assignment2\bin\EntityFramework.xml
 D:\asp.net\AllAssignment\Assignment2\bin\EntityFramework.SqlServer.xml
+D:\asp.net\AllAssignment\Assignment2\bin\Microsoft.Web.Infrastructure.dll
+D:\asp.net\AllAssignment\Assignment2\obj\Debug\Assignment2.csprojAssemblyReference.cache
+D:\asp.net\AllAssignment\Assignment2\obj\Debug\Assignment2.csproj.CoreCompileInputs.cache
+D:\asp.net\AllAssignment\Assignment2\obj\Debug\Assignment2.csproj.CopyComplete

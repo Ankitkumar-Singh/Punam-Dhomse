@@ -3,4 +3,11 @@ D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\BusinessLayer.pdb
 D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.pdb
 D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
-D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\asp.net\AllAssignment\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\asp.net\AllAssignment\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete

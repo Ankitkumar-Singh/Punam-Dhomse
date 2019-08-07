@@ -1,0 +1,35 @@
+﻿.container {
+    max-width: 1170px;
+    width: 100%;
+    min-height:200px;
+    background: #fff;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.table {
+    margin: 50px;
+}
+h2 {
+    padding-top: 50px;
+}
+img {
+    max-width: 50px;
+    border-radius: 50%;
+}
+.details{
+
+    margin: 50px; 
+}
+/*footer*/
+.main-footer {
+    padding: 20px 0;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+}
+.main-footer p {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}

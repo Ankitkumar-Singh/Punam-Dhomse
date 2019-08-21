@@ -1,0 +1,105 @@
+﻿@model Assignment11.Models.GuestDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+<h2>Delete</h2>
+<div class="container mb-5 pt-5">
+    <br />
+    <div class="card-body m-5 p-5 shadow mh-100 ">
+        <h3 class="text-danger  ">Are you sure you want to delete this?</h3>
+        <hr />
+        <div class="row">
+            <div class="col-md-2">
+                <b>@Html.DisplayNameFor(model => model.Name)</b>
+            </div>
+            <div class="col-md-1">
+                :
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(model => model.Name, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <b>@Html.DisplayNameFor(model => model.Address)</b>
+            </div>
+            <div class="col-md-1">
+                :
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(model => model.Address, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <b> @Html.DisplayNameFor(model => model.Email)</b>
+            </div>
+            <div class="col-md-1">
+                :
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(model => model.Email, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <b> @Html.DisplayNameFor(model => model.Age)</b>
+            </div>
+            <div class="col-md-1">
+                :
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(model => model.Age, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <b> @Html.DisplayNameFor(model => model.DateOFBirth)</b>
+            </div>
+            <div class="col-md-1">
+                :
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(model => model.DateOFBirth, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <b> @Html.DisplayNameFor(model => model.Gender)</b>
+            </div>
+            <div class="col-md-1">
+                :
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(model => model.Gender, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <b> @Html.DisplayNameFor(model => model.Invitation.Invited)</b>
+            </div>
+            <div class="col-md-1">
+                :
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(model => model.Invitation.Invited, new { @class = "form-control" })
+            </div>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-actions no-color mt-5">
+                @Html.ActionLink("Cancel", "Index", "Guest", new { @class = "btn btn-info" })
+                <input type="submit" value="Delete" class="btn btn-default btn-danger" />
+            </div>
+        }
+    </div>
+</div>

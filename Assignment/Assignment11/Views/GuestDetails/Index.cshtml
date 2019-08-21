@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Assignment11.Models.GuestDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h2 class="p-0 ">Details</h2>
+        </div>
+        <div class="col-md-2 ">
+            @Html.ActionLink("Create New", "Create", "GuestDetails", new { @class = "btn btn-success  " })
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="rTable">
+        <div class="rTableRow table-secondary text-center">
+            <div class="rTableHead"><strong>@Html.DisplayNameFor(model => model.Name)</strong></div>
+            <div class="rTableHead"><strong>@Html.DisplayNameFor(model => model.Address)</strong></div>
+            <div class="rTableHead"><strong>@Html.DisplayNameFor(model => model.Email)</strong></div>
+            <div class="rTableHead"><strong>@Html.DisplayNameFor(model => model.Age)</strong></div>
+            <div class="rTableHead"><strong>@Html.DisplayNameFor(model => model.DateOFBirth)</strong></div>
+            <div class="rTableHead"><strong>@Html.DisplayNameFor(model => model.Gender)</strong></div>
+            <div class="rTableHead"><strong>@Html.DisplayNameFor(model => model.Invitation.Invited)</strong></div>
+            <div class="rTableHead"><strong>Operation</strong></div>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="rTableRow text-center">
+                <div class="rTableCell">@Html.DisplayFor(modelItem => item.Name)</div>
+                <div class="rTableCell">@Html.DisplayFor(modelItem => item.Address)</div>
+                <div class="rTableCell">@Html.DisplayFor(modelItem => item.Email)</div>
+                <div class="rTableCell">@Html.DisplayFor(modelItem => item.Age)</div>
+                <div class="rTableCell">@Html.DisplayFor(modelItem => item.DateOFBirth)</div>
+                <div class="rTableCell">@Html.DisplayFor(modelItem => item.Gender)</div>
+                <div class="rTableCell">@Html.DisplayFor(modelItem => item.Invitation.Invited)</div>
+                <div class="rTableCell">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-info m-1" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger m-1" })
+                </div>
+            </div>
+        }
+    </div>
+</div>

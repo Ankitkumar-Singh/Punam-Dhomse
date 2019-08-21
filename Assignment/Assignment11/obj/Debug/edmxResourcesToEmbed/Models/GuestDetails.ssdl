@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GuestDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="InvitationId" Type="int" />
+    <Property Name="DateOFBirth" Type="date" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Invitation">
+    <Key>
+      <PropertyRef Name="InvitationId" />
+    </Key>
+    <Property Name="InvitationId" Type="int" Nullable="false" />
+    <Property Name="Invited" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__GuestDeta__Invit__3E52440B">
+    <End Role="Invitation" Type="Self.Invitation" Multiplicity="0..1" />
+    <End Role="GuestDetails" Type="Self.GuestDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invitation">
+        <PropertyRef Name="InvitationId" />
+      </Principal>
+      <Dependent Role="GuestDetails">
+        <PropertyRef Name="InvitationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelsStoreContainer">
+    <EntitySet Name="GuestDetails" EntityType="Self.GuestDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invitation" EntityType="Self.Invitation" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__GuestDeta__Invit__3E52440B" Association="Self.FK__GuestDeta__Invit__3E52440B">
+      <End Role="Invitation" EntitySet="Invitation" />
+      <End Role="GuestDetails" EntitySet="GuestDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
